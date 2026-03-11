@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Wedding Invitation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<div class="card">
+
+<h3>!! Shri Ganeshay Namah !!</h3>
+
+<h2>The Auspicious Wedding Ceremony Of</h2>
+
+<h1>Kajal Mavi</h1>
+
+<h2>&</h2>
+
+<h1>Vibhor Bhati (UPP)</h1>
+
+<img src="https://tse1.mm.bing.net/th/id/OIP.OZBz1cVtHuAi4JOajS3TegHaHa?pid=Api&h=220&P=0" class="couple">
+
+<h2>Auspicious Date</h2>
+
+<p class="date">Sunday, 19 April 2026</p>
+
+<p>Dinner & Barat Reception : 7:00 PM onwards</p>
+
+<p class="vidaai">Vidaai taro ki chaoon mein</p>
+
+<h2>Venue</h2>
+
+<p>
+Chairman Farm House <br>
+Mandoli Road, Loni, Ghaziabad (U.P.)
+</p>
+
+<h2 id="countdown"></h2>
+
+</div>
+
+<script>
+
+var weddingDate = new Date("April 19, 2026 19:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = weddingDate - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+days+" Days "+hours+" Hours "+minutes+" Minutes Remaining";
+
+},1000);
+
+</script>
+
+</body>
+</html>
